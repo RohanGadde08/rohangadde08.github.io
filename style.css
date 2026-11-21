@@ -1,0 +1,40 @@
+body{
+    background-color: gainsboro;
+    /*below is not doing anything lol*/ 
+    border: 10px ;
+}
+
+/*flexbox puts its children (photo + main) in a row instead of stacked*/
+.page {
+    display: flex;
+    align-items: center;     /*vertically center the photo next to the text*/
+    gap: 40px;               /*space between photo and text*/
+    max-width: 1100px;
+    margin: 100px auto;      /*auto left/right centers it on the page*/
+    padding: 0 20px;
+}
+
+main {
+    max-width: 800px;
+    padding: 30px;
+    /*border: 1px solid darkgreen;*/
+    background-color: gainsboro;
+}
+
+nav a {
+    display: block;
+}
+
+img{
+    width : 200px;
+    height: auto;
+    flex-shrink: 0;    /*don't let the photo get squished*/
+}
+
+/*on narrow screens (phones), stack photo on top of text again*/
+@media (max-width: 700px) {
+    .page {
+        flex-direction: column;
+        align-items: center;
+    }
+}
