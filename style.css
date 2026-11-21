@@ -21,13 +21,21 @@ main {
     background-color: gainsboro;
 }
 
+/*line under the name*/
+h1 {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;   /*space between the name and the line*/
+}
+
 nav a {
     display: block;
 }
 
 img{
-    width : 200px;
+    width : 280px;
     height: auto;
+    border: 6px solid white;                 /*white frame, like a printed photo*/
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);   /*soft shadow so it lifts off the page*/
     flex-shrink: 0;    /*don't let the photo get squished*/
 }
 
