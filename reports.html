@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reports</title>
+    <title>backpacking trip reports</title>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
-<body>    
-    <a href = "index.html"><- back home</a>
-    <p>in the works</p>
+<body>
+
+    <!--same centered column as the home page, but without the side photo-->
+    <main class="reports-page">
+        <a href="index.html">&lt;- back home</a>
+
+        <h1>backpacking trip reports</h1>
+        <p>write-ups from trips i've taken.</p>
+
+        <!--grid that holds every trip card. to add a new trip, copy one <a class="report-card"> block-->
+        <div class="report-grid">
+
+            <!--one trip card: the whole thing is a link, so clicking anywhere on it opens the report-->
+            <a class="report-card" href="reports/moose-lake-tablelands.html">
+                <img src="images/moose-lake-tablelands.jpg" alt="sunset over moose lake and the great western divide">
+                <h2>moose lake and the tablelands</h2>
+            </a>
+
+        </div>
+    </main>
+
 </body>
 </html>

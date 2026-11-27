@@ -46,3 +46,93 @@ img{
         align-items: center;
     }
 }
+
+/* ---------- trip reports ---------- */
+
+/*single centered column for reports.html and each report page*/
+.reports-page {
+    margin: 60px auto;      /*auto left/right centers it, same trick as .page*/
+}
+
+/*grid of trip cards: as many 300px+ columns as fit, wraps on small screens*/
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/*each card is a link styled like a printed photo with a caption*/
+.report-card {
+    display: block;
+    background-color: white;
+    padding: 10px 10px 4px;                 /*thicker bottom, like a polaroid*/
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    color: black;
+    text-decoration: none;                  /*no underline on the whole card*/
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/*lift the card a little when you hover so it feels clickable*/
+.report-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/*override the global img rule (280px + white frame) — the card is the frame now*/
+.report-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;      /*crop instead of stretching if a photo isn't 4:3*/
+    border: none;
+    box-shadow: none;
+    display: block;
+}
+
+.report-card h2 {
+    font-size: 1.1em;
+    font-weight: normal;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/*big photo at the top of an individual report page*/
+.report-hero {
+    width: 100%;
+    margin: 20px 0;
+    box-sizing: border-box; /*keep the white frame inside the 100% width*/
+}
+
+/*smaller section headers for each day of a trip report*/
+.reports-page h3 {
+    margin-top: 40px;
+}
+
+/*photo + caption inside a report, framed like a polaroid (same look as the cards)*/
+.report-photo {
+    max-width: 450px;       /*keeps tall portrait photos from filling the whole screen*/
+    margin: 25px auto;      /*centered*/
+    background-color: white;
+    padding: 10px 10px 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/*override the global img rule — the figure is the frame now*/
+.report-photo img {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    display: block;
+}
+
+.report-photo figcaption {
+    color: black;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 8px 0;
+}
+
+/*landscape photos can use the full column width*/
+.report-photo.wide {
+    max-width: none;
+}
